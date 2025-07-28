@@ -1,7 +1,7 @@
 #!/bin/bash
 
 read -p "Enter your TaxID: " txid
-read -p "Enter your filepath: " filepath 
+read -p "Enter your filepath (storage_directory/project_directory): " filepath 
 read -p "Enter the SRR list file name: " srrlist
 echo $txid
 echo $filepath
