@@ -5,6 +5,7 @@ read -p "Enter your filepath: " filepath
 read -p "Enter the SRR list file name: " srrlist
 echo $txid
 echo $filepath
+echo $srrlist
 
 mkdir -m777 /media/volume/$filepath/
 mkdir -m777 /media/volume/$filepath/data
