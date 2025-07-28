@@ -2,10 +2,10 @@
 
 read -p "Enter your TaxID: " txid
 read -p "Enter your filepath (storage_directory/project_directory): " filepath 
-read -p "Enter the SRR list file name: " srrlist
+
 echo $txid
 echo $filepath
-echo $srrlist
+
 
 mkdir -m777 /media/volume/$filepath/
 mkdir -m777 /media/volume/$filepath/data
@@ -23,5 +23,5 @@ datasets download genome taxon $txid --reference --include genome,rna,protein,cd
 
 cd /media/volume/sdc/S25/data/untrimmed_fastq
 
-prefetch --option-file /home/exouser/$srrlist
+prefetch --option-file /home/exouser/VCF2/SRR_Acc_List.txt
 fasterq-dump SRR*
