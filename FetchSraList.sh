@@ -1,10 +1,12 @@
 #!/bin/bash
 
+echo "Generate a list of filtered SRA runs"
+
 read -p "Enter your TaxID: " txid
-read -p "Enter your filepath (storage_directory/project_directory): " filepath 
+#read -p "Enter your filepath (storage_directory/project_directory): " filepath 
 
 echo $txid
-echo $filepath
+#echo $filepath
 
-esearch -db sra -query "${2}" | efetch -format docsum | xtract -pattern Runs -ACC @acc  -element "&ACC" > $4/$1/${1}.txt
-esearch -db sra -query "${2}" | efetch -format runinfo > $4/$1/assembly/reference/RunInfo.txt
+esearch -db sra -query "$txid" | efetch -format docsum | xtract -pattern Runs -ACC @acc  -element "&ACC" > SraList.txt
+esearch -db sra -query "$txid" | efetch -format runinfo > RunInfo.txt
