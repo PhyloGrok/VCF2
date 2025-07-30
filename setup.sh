@@ -19,9 +19,9 @@ mkdir -m777 /media/volume/$filepath/results/bcf
 mkdir -m777 /media/volume/$filepath/results/vcf
 
 
-datasets download genome taxon $txid --reference --include genome,rna,protein,cds,gff3,gtf,gbff,seq-report --filename /media/volume/$filepath/data/ref_genome/$txid.zip
+datasets download genome taxon $txid --reference --include genome --filename /media/volume/$filepath/data/ref_genome/$txid.zip
 
-cd /media/volume/sdc/S25/data/untrimmed_fastq
+#cd /media/volume/sdc/S25/data/untrimmed_fastq
 
-prefetch --option-file /home/exouser/VCF2/SRR_Acc_List.txt
-fasterq-dump SRR*
+#prefetch --option-file /home/exouser/VCF2/SRR_Acc_List.txt
+#fasterq-dump SRR*
