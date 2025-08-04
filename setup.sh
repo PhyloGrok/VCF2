@@ -19,7 +19,9 @@ mkdir -m777 /media/volume/$filepath/results/bcf
 mkdir -m777 /media/volume/$filepath/results/vcf
 
 
-datasets download genome taxon $txid --reference --include genome --filename /media/volume/$filepath/data/ref_genome/$txid.zip
+datasets download genome taxon $txid --reference --include genome --filename /media/volume/$filepath/data/$txid.zip
+
+unzip /media/volume/$filepath/data/$txid.zip
 
 #cd /media/volume/sdc/S25/data/untrimmed_fastq
 
