@@ -19,7 +19,7 @@ mkdir -m777 ~/VCF.projects/$txid/results/bcf
 mkdir -m777 ~/VCF.projects/$txid/results/vcf
 
 
-datasets download genome taxon $txid --reference --include genome --filename /media/volume/$filepath/data/$txid.zip
+datasets download genome taxon $txid --reference --include genome --filename ~/VCF.projects/$txid/data/$txid.zip
 
 unzip /media/volume/$filepath/data/$txid.zip
 
