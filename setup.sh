@@ -19,10 +19,9 @@ mkdir -m777 ~/VCF.projects/$txid/results/bcf
 mkdir -m777 ~/VCF.projects/$txid/results/vcf
 
 
-datasets download genome taxon $txid --reference --include genome --filename ~/VCF.projects/$txid/data/$txid.zip
+datasets download genome taxon $txid --reference --include genome --filename ~/VCF.projects/$txid/data/ref_genome/$txid.zip
 
-unzip /media/volume/$filepath/data/$txid.zip
-
+unzip ~/VCF.projects/$txid/data/ref_genome/$txid.zip
 #cd /media/volume/sdc/S25/data/untrimmed_fastq
 
 #prefetch --option-file /home/exouser/VCF2/SRR_Acc_List.txt
