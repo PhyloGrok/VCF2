@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bwa index /media/volume/sdb/S25/data/ref_genome/GCA_004799605.1_ASM479960v1_genomic.fna
+bwa index ~/VCF.project/$txid/data/ref_genome/ncbi_dataset/data/GC*/GC*.fna
 
 for infile in /media/volume/sdb/S25/data/trimmed_fastq/*_1.trim.fastq
 	do
