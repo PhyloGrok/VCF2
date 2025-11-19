@@ -19,7 +19,9 @@ mkdir -m777 ~/VCF.projects/$txid/results/bcf
 mkdir -m777 ~/VCF.projects/$txid/results/vcf
 
 
-datasets download genome taxon $txid --reference --include genome --filename ~/VCF.projects/$txid/data/ref_genome/$txid.zip
+#datasets download genome taxon $txid --reference --include genome --filename ~/VCF.projects/$txid/data/ref_genome/$txid.zip
+datasets download genome taxon $txid --reference --include genome,rna,protein,cds,gff3,gtf,gbff,seq-report --filename ~/VCF.projects/$txid/data/ref_genome/$txid.zip
+
 
 unzip ~/VCF.projects/$txid/data/ref_genome/$txid.zip -d ~/VCF.projects/$txid/data/ref_genome
 #cd /media/volume/sdc/S25/data/untrimmed_fastq
